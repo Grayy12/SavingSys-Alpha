@@ -18,7 +18,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Grayy12/SavingSys-Alp
 local SavingSystem =
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Grayy12/SavingSys-Alpha/main/src.lua", true))()
 
-local File = SavingSystem.Init("ExampleFolder", "ExampleFile") -- Find or create a file in the ExampleFolder folder called ExampleFile
+local File = SavingSystem.Init("ExampleFolder", "ExampleFile.txt") -- Find or create a file in the ExampleFolder folder called ExampleFile
 -- A Folder is not required, if you do not provide one it will save in the workspace directory
 
 local infomation = {
