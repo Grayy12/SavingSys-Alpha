@@ -1,4 +1,6 @@
 # Saving System Alpha
+Please let me know if you find any bugs on discord: [Grayy#6068](https://discord.gg/kVWSun7GCU)
+
 
 ## Introduction
 ### You can save data for your Roblox script using this *alpha* script. This can be used to save anything you require.
