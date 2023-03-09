@@ -87,12 +87,11 @@ function SaveSys.Init(Folder: string?, File: string)
 	function self:SetupKey(key: string)
 		local self2 = {}
 		self2._Folder = self._Folder
-		if not CheckFile(("%s/%s"):format(self._Folder, "Key.txt")) or not CheckFile("Key.txt") then
-			if not syn.crypt.hash and not sha384_hash and not fluxus.crypt.hash then
-				warn("Encryption is not supported on this executor or not known, key will be visible")
-			end
-			writefile(self._Folder ~= "" and ("%s/%s"):format(self._Folder, "Key.txt") or "Key.txt", Hash(key))
+
+		if not syn.crypt.hash and not sha384_hash and not fluxus.crypt.hash then
+			warn("Encryption is not supported on this executor or not known, key will be visible")
 		end
+		writefile(self._Folder ~= "" and ("%s/%s"):format(self._Folder, "Key.txt") or "Key.txt", Hash(key))
 
 		function self2:CheckKey(key: string): boolean
 			if not CheckFile(("%s/%s"):format(self._Folder, "Key.txt")) and not CheckFile("Key.txt") then
