@@ -3,6 +3,11 @@
 ## Introduction
 ### You can save data for your Roblox script using this *alpha* script. This can be used to save anything you require.
 
+## Loadstring
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Grayy12/SavingSys-Alpha/main/src.lua", true))()
+```
 
 ## How To
 ### Here is an example script
