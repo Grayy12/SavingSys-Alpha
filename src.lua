@@ -1,3 +1,5 @@
+-- ALPHA MADE BY: Grayy#6068
+
 local SaveSys = {}
 
 local function CheckFile(filepath)
@@ -19,8 +21,11 @@ function SaveSys.Init(Folder: string?, File: string)
 		warn("Plase provide a folder and file name")
 		return
 	end
-
-	self._FilePath = ("%s/%s"):format(Folder, File)
+	if Folder ~= "" then
+		self._FilePath = ("%s/%s"):format(Folder, File)
+	else
+		self._FilePath = File
+	end
 
 	if not isfolder(Folder) then
 		makefolder(Folder)
