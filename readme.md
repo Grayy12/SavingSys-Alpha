@@ -1,5 +1,5 @@
 # Saving System Alpha
-Please let me know if you find any bugs on discord: [Grayy#6068](https://discord.gg/kVWSun7GCU)
+Please let me know if you find any bugs on discord: [Grayy#6068](https://discord.com/users/339838833489346560)
 
 
 ## Introduction
