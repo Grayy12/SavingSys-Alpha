@@ -1,4 +1,4 @@
--- ALPHA MADE BY: Grayy#6068
+-- ALPHA MADE BY: Grayy#6068 https://discord.com/users/339838833489346560
 
 local SaveSys = {}
 
