@@ -24,6 +24,7 @@ end
 
 function SaveSys.Init(Folder: string?, File: string)
 	local self = {}
+	local exists = true
 	if not isfolder or not isfile then
 		warn("File Saving is not supported on this executor")
 		return
@@ -44,8 +45,9 @@ function SaveSys.Init(Folder: string?, File: string)
 	if not isfolder(Folder) then
 		makefolder(Folder)
 	end
-
+	
 	if not isfile(self._FilePath) then
+		exists = false
 		writefile(self._FilePath, "")
 	end
 
@@ -113,7 +115,7 @@ function SaveSys.Init(Folder: string?, File: string)
 		return self2
 	end
 
-	return self
+	return self, exists
 end
 
 return SaveSys
