@@ -33,13 +33,6 @@ local LoadedData = File:Load() -- Load the data from the file returns a table
 
 print(LoadedData["Name"]) -- Prints Grayy
 
--- EARLY KEY SYSTEM MAY BE CRACKABLE
-
--- Will hash the key if executor supports it
-local Keysys = File:SetupKey("ExampleKey") -- Setup a key system (Creates a key file)
-
-print(Keysys:CheckKey("ExampleKey")) -- Check if the key is correct returns true or false
-
 ```
 
 ### Keep in mind that this is just an alpha
