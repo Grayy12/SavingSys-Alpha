@@ -11,6 +11,7 @@ local function CheckFile(filepath)
 end
 
 function SaveSys.Init(Folder: string?, File: string)
+	File = File..'.json'
 	local self = {}
 	local exists = true
 	if not isfolder or not isfile then
