@@ -40,7 +40,7 @@ function SaveSys.Init(Folder: string?, File: string)
 		writefile(self._FilePath, "")
 	end
 
-	``[[function self:Save(Data: table, override: boolean?, encrypt: boolean?)
+	--[[function self:Save(Data: table, override: boolean?, encrypt: boolean?)
 		override = override or false
 		-- TODO: Add encryption
 		if not CheckFile(self._FilePath) then
