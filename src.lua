@@ -40,7 +40,7 @@ function SaveSys.Init(Folder: string?, File: string)
 		writefile(self._FilePath, "")
 	end
 
-	function self:Save(Data: table, override: boolean?, encrypt: boolean?)
+	``[[function self:Save(Data: table, override: boolean?, encrypt: boolean?)
 		override = override or false
 		-- TODO: Add encryption
 		if not CheckFile(self._FilePath) then
@@ -57,7 +57,29 @@ function SaveSys.Init(Folder: string?, File: string)
 		end
 		local Data = game:GetService("HttpService"):JSONEncode(Data)
 		writefile(self._FilePath, Data)
-	end
+	end]]
+
+	function self:Save(Data: table, override: boolean?, encrypt: boolean?)
+    override = override or false
+    -- TODO: Add encryption
+    if not CheckFile(self._FilePath) then
+        warn("File does not exist")
+        return
+    end
+
+    local OldData = self:Load()
+
+    for i, v in next, Data do
+        if OldData[i] and not override then
+            OldData[i] = v
+        else
+            OldData[i] = Data[i]
+        end
+    end
+
+    local Data = game:GetService("HttpService"):JSONEncode(OldData)
+    writefile(self._FilePath, Data)
+end
 
 	function self:Load(encrypted: boolean?): table
 		-- TODO: Add encryption
